@@ -1,0 +1,115 @@
+body {
+    background-color: #EEF0F4;
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+ul li {  
+    color: #432000;
+    background-color: #fffdf8;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    width: 100%;
+}
+input {
+    background-color: #EEF0F4;
+    border: 0;
+    border-radius: 8px;
+    color: #432000;
+    font-size: 20px;
+    margin: 3px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: #AC485A;
+    border: #AC485A solid 1px;
+    border-radius: 8px;
+    color: #FFF8F1;
+    font-size: 20px;
+    margin: 3px 0;
+    padding: 15px;
+}
+button:hover {
+    background-color:#883242;
+    color: #FFF8F1;
+}
+button:active {
+    background-color:#883242;
+    color: #FFF8F1;
+    transform: translateY(2px);
+}
+button:focus {
+    border: #883242 solid 1px;
+    color: #FFF8F1;
+}
+
+.container {
+    background-color: #fff;
+    border: #432000 solid 2px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.toDoList {
+    list-style: none;
+}
+.toDoList button {
+    background-color: #bdbab7;
+    border: #bdbab7 solid 1px;
+    border-radius: 4px;
+    float: right;
+    font-size: 12px;
+    text-align: center;
+    padding: 3px 7px 3px 7px;
+    margin-left: 30px;
+}
+.toDoList button:hover {
+    background-color:#AC485A;
+    color: #FFF8F1;
+}
+.toDoList button:active {
+    background-color:#AC485A;
+    color: #FFF8F1;
+    transform: translateY(2px);
+}
+.toDoList button:focus {
+    border: #AC485A solid 1px;
+    color: #FFF8F1;
+}
+.responseMessage {
+    animation-name: responseAnimation;
+    animation-duration: 8s;
+    border: 0;
+    border-radius: 8px;
+    font-size: 20px;
+    margin: 3px 0;
+    padding: 15px;
+    text-align: center;
+}
+@keyframes responseAnimation {
+    0% {background-color: #9cd8f6; color: #432000;}
+    100% {background-color: #fff; color: #fff;}
+}

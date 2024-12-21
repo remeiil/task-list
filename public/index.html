@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="to_do_list.png"/>
+
+            <input type="text" id="add-task" placeholder="New task to add">
+            <input type="text" id="task-duration" placeholder="Est. time to complete">
+            <button id="submit-task">Add Task</button>
+        <div id="call-response"></div>
+        <ul id="to-do-list" class="toDoList">
+        </ul>
+    </div>
+</body>
+<script src="dbCalls.js"></script>
+</html>
