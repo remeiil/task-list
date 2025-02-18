@@ -57,6 +57,7 @@ async function postTask(e) {
     }, 5000);
     clearInputFields()
     getTasks()
+    taskName.focus()
 }
 function clearInputFields() {
     taskName.value = ""
