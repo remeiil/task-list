@@ -7,7 +7,7 @@ const callResponse = document.getElementById("call-response");
 getTasks(); //loads the tasks onto the page initially
 
 async function getTasks() {
-    const res = await fetch('/getTasks', 
+    const res = await fetch('/getCompletedTasks', 
     {
         method: 'GET',
         headers: {
@@ -27,11 +27,16 @@ async function getTasks() {
         const prettyDay = ["Zenith","1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th","11th","12th","13th","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","29th","30th","31st"];
         const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
         let dbTime = new Date(tasks.createdTime);
+        let completedDBTime = new Date(tasks.completedTime);
         let weekdayName = weekday[dbTime.getDay()];
         let date = prettyDay[dbTime.getDate()];
         let monthName = month[dbTime.getMonth()];
         let year = dbTime.getFullYear();
-        taskOutput += `<li>${tasks.taskName} <br><span class="time">Estimated as: ${tasks.taskDuration} </span><br><span class="date">Created: ${weekdayName} ${date} ${monthName} ${year}</span><button id="${tasks.taskID}">X</button></li>`;
+        let completedWeekdayName = weekday[completedDBTime.getDay()];
+        let completedDate = prettyDay[completedDBTime.getDate()];
+        let completedMonthName = month[completedDBTime.getMonth()];
+        let completedYear = completedDBTime.getFullYear();
+        taskOutput += `<li>${tasks.taskName} <br><span class="time">Estimated as: ${tasks.taskDuration} </span><br><span class="date">Created: ${weekdayName} ${date} ${monthName} ${year}</span><br><span class="date">Completed: ${completedWeekdayName} ${completedDate} ${completedMonthName} ${completedYear}</span><button id="${tasks.taskID}">Remove from DB</button></li>`;
     }
     toDoList.innerHTML = taskOutput;
 }
@@ -68,7 +73,7 @@ async function deleteTask(e) {
     e.preventDefault();
     
     const taskID = e.target.id;
-    const res = await fetch(`/completeTask?id=${taskID}`, 
+    const res = await fetch(`/deleteTask?id=${taskID}`, 
         {
             method: 'DELETE',
         })

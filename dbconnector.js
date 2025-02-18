@@ -10,7 +10,7 @@ function connect(err){
     console.log('Connecting to To Do database...');
 }
 
-let sqlStatement = `CREATE TABLE IF NOT EXISTS tasks (task_id INTEGER PRIMARY KEY, task_name TEXT NOT NULL, task_duration TEXT NOT NULL);`;
+let sqlStatement = `CREATE TABLE IF NOT EXISTS tasks (task_id INTEGER PRIMARY KEY, task_name TEXT NOT NULL, task_duration TEXT NOT NULL, task_status TEXT, created_time datetime, completed_time datetime);`;
 DB.run(sqlStatement, [], (err) => {
     if (err) {
         console.log('There was an error creating the tasks table.');
