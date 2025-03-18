@@ -10,7 +10,7 @@ cors is included as I use the task list as its own thing as well as part of a no
 `<VirtualHost *:80>`  
     `ServerAlias demo-todo.example-domain.co.nz`  
     `DocumentRoot /var/www/demo-todo`  
-    `ProxyPass / http://localhost:3000/` 
+    `ProxyPass / http://localhost:3000/`  
 `</VirtualHost>`  
 
   
