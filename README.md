@@ -7,11 +7,11 @@ cors is included as I use the task list as its own thing as well as part of a no
 3. install the packages: npm i
 4. update the .conf file :
   
-`<VirtualHost *:80>'  
-    'ServerAlias demo-todo.example-domain.co.nz'  
-    'DocumentRoot /var/www/demo-todo'  
-    'ProxyPass / http://localhost:3000/' 
-'</VirtualHost>`  
+`<VirtualHost *:80>`  
+    `ServerAlias demo-todo.example-domain.co.nz`  
+    `DocumentRoot /var/www/demo-todo`  
+    `ProxyPass / http://localhost:3000/` 
+`</VirtualHost>`  
 
   
 5. reload apache
